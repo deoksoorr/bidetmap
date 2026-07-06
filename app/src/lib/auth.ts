@@ -7,8 +7,8 @@ export async function ensureLogin(): Promise<boolean> {
   const { data: { session } } = await supabase.auth.getSession();
   if (session) return true;
   try {
-    const { authorizationCode } = await tossLogin();
-    const { data, error } = await supabase.functions.invoke("toss-auth", { body: { authorizationCode } });
+    const { authorizationCode, referrer } = await tossLogin();
+    const { data, error } = await supabase.functions.invoke("toss-auth", { body: { authorizationCode, referrer } });
     if (error || !data?.access_token) return false;
     await supabase.auth.setSession({ access_token: data.access_token, refresh_token: data.refresh_token });
     return true;
