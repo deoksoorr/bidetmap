@@ -1,0 +1,47 @@
+# ───────── Dependencies ─────────
+node_modules/
+
+# ───────── Build output & caches ─────────
+dist/
+build/
+.granite/
+*.ait
+*.tsbuildinfo
+.vite/
+.cache/
+
+# ───────── Env & secrets (keep .env.example) ─────────
+.env
+.env.*
+!.env.example
+
+# Certificates / private keys / tokens (defensive — none currently in repo)
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+id_rsa
+id_rsa.*
+*.token
+
+# ───────── Supabase CLI local state ─────────
+supabase/.temp/
+supabase/.branches/
+
+# ───────── Claude Code local config ─────────
+.claude/
+
+# ───────── Logs ─────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ───────── OS / editor ─────────
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
