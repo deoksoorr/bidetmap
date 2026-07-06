@@ -78,7 +78,7 @@ cd bidet-map && npm install && npm run dev
 cd admin && npm install && npm run dev
 ```
 
-> Kakao Map은 카카오 개발자센터 → 플랫폼 → **Web 사이트 도메인**에 `http://localhost:5173` 등록이 필요합니다.
+> Kakao Map은 카카오 개발자센터 → 플랫폼 → **Web 사이트 도메인**에 테스트 로컬 주소 등록이 필요합니다.
 
 ## 빌드 / 배포
 
